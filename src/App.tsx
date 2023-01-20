@@ -16,10 +16,12 @@ function App() {
   React.useEffect(() => {
     // instantiate the Yjs doc
     const doc = new Y.Doc();
-    
+
     // instantiate server connection and tie it with yjs doc object
     const wsProvider = new WebsocketProvider(
-      `ws://${process.env.REACT_APP_SERVER_HOST}:${process.env.REACT_APP_SERVER_PORT}`,
+      process.env.REACT_APP_ENV === 'production'
+        ? `wss://${process.env.REACT_APP_SERVER_HOST}`
+        : `ws://${process.env.REACT_APP_SERVER_HOST}:${process.env.REACT_APP_SERVER_PORT}`,
       "",
       doc
     );

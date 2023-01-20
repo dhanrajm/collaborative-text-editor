@@ -2,11 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<br/>
-
 ## Running the app locally
-
-<br/>
 
 ### Backend
 
@@ -21,7 +17,9 @@ SERVER_HOST=localhost
 - `yarn start`
 
 ##### The server should runnig at localhost 5004
-<br/>
+
+
+
 #### Using docker
 
 - `docker build -t collaborative-text-editor .`
@@ -30,7 +28,7 @@ SERVER_HOST=localhost
 
 ##### The server should runnig at localhost 5004
 
-<br/>
+
 
 ### Frontend
 
@@ -40,13 +38,14 @@ SERVER_HOST=localhost
 ```
 PORT=5000
 HOST=localhost
+REACT_APP_ENV=development
 REACT_APP_SERVER_PORT=5004
 REACT_APP_SERVER_HOST=localhost
 ```
 
 - run `yarn start`
 
-<br/>
+
 
 ## Brief explaination of architecture and system design
 
