@@ -1,0 +1,13 @@
+services:
+  # A Docker web service
+  - type: web
+    name: collaborative-text-editor
+    env: docker
+    rootDir: server
+    numInstances: 1 # (defaults to 1)
+    healthCheckPath: /
+    envVars:
+      - key: SERVER_PORT
+        value: 5004
+      - key: SERVER_HOST
+        value: localhost
