@@ -24,7 +24,7 @@ SERVER_HOST=localhost
 
 - `docker build -t collaborative-text-editor .`
 
-- `docker run -it -e SERVER_PORT=5004 -e SERVER_HOST='localhost' --network=host collaborative-text-editor`
+- `docker run -it -e SERVER_PORT=5004 -e SERVER_HOST=localhost --network=host collaborative-text-editor`
 
 ##### The server should runnig at localhost 5004
 

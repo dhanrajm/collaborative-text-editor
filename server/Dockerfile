@@ -1,15 +1,11 @@
-FROM node:16 AS build
-WORKDIR /srv
+FROM node:16-alpine
+
+WORKDIR /app
+
 COPY package.json .
-RUN yarn install
-
-FROM node:16-slim
-
-# Create app directory
-WORKDIR /usr/src/app
-
-COPY --from=build /srv .
+COPY yarn.lock ./
 COPY index.js .
 
-EXPOSE 5004
+RUN yarn install --frozen-lockfile
+
 CMD ["yarn", "start"]
